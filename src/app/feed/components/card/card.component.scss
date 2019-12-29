@@ -1,0 +1,24 @@
+.card {
+    width: 40%;
+}
+.user {
+    display: flex;
+    align-items: center;
+    position: inherit;
+}
+.title-group {
+    font-size: 6px;
+}
+.title-group .main-title {
+    font-size: 12px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}

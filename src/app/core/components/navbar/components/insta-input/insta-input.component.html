@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="input-container" (click)="onInputOpen()" *ngIf="!show">
+        <span><i class="fa fa-search" aria-hidden="true"></i> Busca </span>
+    </div>
+    <div class="input-container" *ngIf="show" [ngClass]="{'background-color-white': show }">
+        <div class="input-group">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input #searchInput (changed)="onInputChanged()" [(ngModel)]="value" type="text" (blur)="onInputClose()" placeholder="Busca">
+            <button (click)="onInputClose()"><i class="fa fa-window-close" aria-hidden="true"></i></button>
+        </div>
+    </div>
+</div>
