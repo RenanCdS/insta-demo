@@ -2,7 +2,9 @@
     background: #fff;
     border-top: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd;
-    box-shadow: 1px 1px 1px black;
+    position: fixed;
+    top: 0;
+    z-index: 1;
 }
 
 .list-icons {

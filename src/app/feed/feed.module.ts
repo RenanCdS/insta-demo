@@ -8,9 +8,10 @@ import { CardComponent } from './components/card/card.component';
 
 // Material imports
 import { MatCardModule } from '@angular/material/card';
+import { UserPhotoComponent } from './components/user-photo/user-photo.component';
 
 @NgModule({
-  declarations: [FeedPageComponent, CardComponent],
+  declarations: [FeedPageComponent, CardComponent, UserPhotoComponent],
   imports: [
     CommonModule,
     CoreModule,
