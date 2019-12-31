@@ -1,5 +1,6 @@
 .card {
     width: 60%;
+    margin: 30px;
 }
 .main-title {
     font-size: 12px;
@@ -9,9 +10,6 @@
     align-items: center;
 }
 .more-button {
-    background: inherit;
-    border: none;
-    cursor: pointer;
     position: absolute;
     right: 10px;
 }
@@ -30,4 +28,34 @@
     border: none;
     cursor: pointer;
     padding: 0 5px;
+}
+
+.button-style {
+    background: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+.options-list {
+    list-style: none;
+    text-decoration: none;
+    width:100%;
+}
+
+.options-list li {
+    text-align:center;
+    font-size: 1.5em;
+    border-bottom: 1px solid #ababab;
+    width: inherit;
+    padding: 3px;
+}
+
+.options-list li:last-child {
+    
+    border: none;
+}
+
+.danger {
+    color: #ed4956;
+    font-weight: bolder;
 }

@@ -1,11 +1,11 @@
 <mat-card class="card">
     <mat-card-header class="header">
-        <img mat-card-avatar class="img-avatar" src="https://material.angular.io/assets/img/examples/shiba2.jpg" />
-        <mat-card-title class="main-title">Dogão</mat-card-title>
-        <mat-card-subtitle>Praia Grande, Santos</mat-card-subtitle>
-        <button class="more-button"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></button>
+        <img mat-card-avatar class="img-avatar" [src]="followerPhoto.userImgUrl" />
+        <mat-card-title class="main-title">{{ followerPhoto.username }}</mat-card-title>
+        <mat-card-subtitle>{{ followerPhoto.location }}</mat-card-subtitle>
+        <button (click)="openModal()" class="more-button button-style"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></button>
     </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <img mat-card-image [src]="followerPhoto.photoUrl" alt="">
     <mat-card-actions class="action-buttons-container">
       <div class="main-buttons">
         <button class="action-button"><i class="fa fa-heart-o fa-2x" aria-hidden="true"></i></button>
