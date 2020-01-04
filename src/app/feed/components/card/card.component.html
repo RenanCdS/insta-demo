@@ -14,10 +14,22 @@
       </div>
       <button class="action-button"><i class= "fa fa-flag-o fa-2x" aria-hidden="true"></i></button>
     </mat-card-actions>
-    <mat-card-content>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
+    <mat-card-actions class="action-likes-comments">
+      <div class="likes" *ngIf="followerPhoto.likes.length">
+        <app-user-photo [imgSrc]="followerPhoto.userImgUrl" size="20"></app-user-photo>
+        <span class="people-likes"> Curtido por <a class="user-link" href="#">{{ followerPhoto.likes[0].username }}</a> e <a class="user-link" href="#">outras {{ followerPhoto.likes.length - 1 }} pessoas</a></span>
+      </div>
+      <div class="comments" *ngIf="followerPhoto.comments.length">
+        <div class="comment" *ngFor="let comment of followerPhoto.comments">
+          <span class="user-link" >{{ comment.username }}  </span>
+          <span class="comments" >{{ comment.userComment }} </span>
+        </div>
+      </div>
     </mat-card-actions>
+    <mat-card-footer>
+      <div class="footer-comment">
+        <input type="text" class="footer-input" [(ngModel)]="comment" placeholder="Adicione um comentário">
+        <button class="publish-button-common" [disabled]="!comment" [ngClass]="{'disabled': !comment, 'publish-button': comment }">Publicar</button>
+      </div>
+    </mat-card-footer>
   </mat-card>

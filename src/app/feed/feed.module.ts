@@ -12,6 +12,7 @@ import { CardMoreOptionsModal } from './components/card/card.component';
 import { MatCardModule } from '@angular/material/card';
 import { UserPhotoComponent } from './components/user-photo/user-photo.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { MatDialogModule } from '@angular/material/dialog';
   imports: [
     CommonModule,
     BrowserAnimationsModule,
+    FormsModule,
     CoreModule,
     MatCardModule,
     MatDialogModule,

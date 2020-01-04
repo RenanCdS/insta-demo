@@ -37,11 +37,11 @@ export class CardMoreOptionsModal {
 export class CardComponent implements OnInit {
 
   @Input() followerPhoto: FollowerPhoto;
+  comment: string;
   
   constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
-  
   }
 
   openModal(): void {
@@ -49,13 +49,8 @@ export class CardComponent implements OnInit {
       width: '300px',
       height: '250px',
       panelClass: 'custom-dialog-container',
-      
-    });
+  });
 
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log('The dialog was closed');
-    //   this.animal = result;
-    // });
   }
 
 }
