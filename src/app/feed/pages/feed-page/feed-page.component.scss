@@ -7,3 +7,9 @@
 .cards {
     margin-top: 50px;
 }
+
+@media (max-width: 600px) {
+    .container {
+        padding: 0;
+    }
+}

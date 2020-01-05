@@ -1,35 +1,38 @@
-<mat-card class="card">
-    <mat-card-header class="header">
-        <img mat-card-avatar class="img-avatar" [src]="followerPhoto.userImgUrl" />
-        <mat-card-title class="main-title">{{ followerPhoto.username }}</mat-card-title>
-        <mat-card-subtitle>{{ followerPhoto.location }}</mat-card-subtitle>
-        <button (click)="openModal()" class="more-button button-style"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></button>
-    </mat-card-header>
-    <img mat-card-image [src]="followerPhoto.photoUrl" alt="">
-    <mat-card-actions class="action-buttons-container">
-      <div class="main-buttons">
-        <button class="action-button"><i class="fa fa-heart-o fa-2x" aria-hidden="true"></i></button>
-        <button class="action-button"><i class="fa fa-comment-o fa-2x" aria-hidden="true"></i></button>
-        <button class="action-button"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></button>
-      </div>
-      <button class="action-button"><i class= "fa fa-flag-o fa-2x" aria-hidden="true"></i></button>
-    </mat-card-actions>
-    <mat-card-actions class="action-likes-comments">
-      <div class="likes" *ngIf="followerPhoto.likes.length">
-        <app-user-photo [imgSrc]="followerPhoto.userImgUrl" size="20"></app-user-photo>
-        <span class="people-likes"> Curtido por <a class="user-link" href="#">{{ followerPhoto.likes[0].username }}</a> e <a class="user-link" href="#">outras {{ followerPhoto.likes.length - 1 }} pessoas</a></span>
-      </div>
-      <div class="comments" *ngIf="followerPhoto.comments.length">
-        <div class="comment" *ngFor="let comment of followerPhoto.comments">
-          <span class="user-link" >{{ comment.username }}  </span>
-          <span class="comments" >{{ comment.userComment }} </span>
+
+<div class="card-div">
+  <mat-card class="card">
+      <mat-card-header class="header">
+          <img mat-card-avatar class="img-avatar" [src]="followerPhoto.userImgUrl" />
+          <mat-card-title class="main-title">{{ followerPhoto.username }}</mat-card-title>
+          <mat-card-subtitle>{{ followerPhoto.location }}</mat-card-subtitle>
+          <button (click)="openModal()" class="more-button button-style"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></button>
+      </mat-card-header>
+      <img mat-card-image [src]="followerPhoto.photoUrl" alt="">
+      <mat-card-actions class="action-buttons-container">
+        <div class="main-buttons">
+          <button class="action-button"><i class="fa fa-heart-o fa-2x" aria-hidden="true"></i></button>
+          <button class="action-button"><i class="fa fa-comment-o fa-2x" aria-hidden="true"></i></button>
+          <button class="action-button"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></button>
         </div>
-      </div>
-    </mat-card-actions>
-    <mat-card-footer>
-      <div class="footer-comment">
-        <input type="text" class="footer-input" [(ngModel)]="comment" placeholder="Adicione um comentário">
-        <button class="publish-button-common" [disabled]="!comment" [ngClass]="{'disabled': !comment, 'publish-button': comment }">Publicar</button>
-      </div>
-    </mat-card-footer>
-  </mat-card>
+        <button class="action-button"><i class= "fa fa-flag-o fa-2x" aria-hidden="true"></i></button>
+      </mat-card-actions>
+      <mat-card-actions class="action-likes-comments">
+        <div class="likes" *ngIf="followerPhoto.likes.length">
+          <app-user-photo [imgSrc]="followerPhoto.userImgUrl" size="20"></app-user-photo>
+          <span class="people-likes"> Curtido por <a class="user-link" href="#">{{ followerPhoto.likes[0].username }}</a> e <a class="user-link" href="#">outras {{ followerPhoto.likes.length - 1 }} pessoas</a></span>
+        </div>
+        <div class="comments" *ngIf="followerPhoto.comments.length">
+          <div class="comment" *ngFor="let comment of followerPhoto.comments">
+            <span class="user-link" >{{ comment.username }}  </span>
+            <span class="comments" >{{ comment.userComment }} </span>
+          </div>
+        </div>
+      </mat-card-actions>
+      <mat-card-footer>
+        <div class="footer-comment">
+          <input type="text" class="footer-input" [(ngModel)]="comment" placeholder="Adicione um comentário">
+          <button class="publish-button-common" [disabled]="!comment" [ngClass]="{'disabled': !comment, 'publish-button': comment }">Publicar</button>
+        </div>
+      </mat-card-footer>
+    </mat-card>
+</div>

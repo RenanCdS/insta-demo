@@ -21,8 +21,16 @@
             "location": "SBC",
             "userImgUrl": "https://scontent-gru2-2.cdninstagram.com/v/t51.2885-19/s150x150/72847261_574962489918622_7671404296142848_n.jpg?_nc_ht=scontent-gru2-2.cdninstagram.com&_nc_ohc=NKXmA3NvLdsAX_nX8DW&oh=0938141d765b2096df05ccf18d268f11&oe=5E9F871D",
             "photoUrl": "https://scontent-gru1-1.cdninstagram.com/v/t51.2885-15/e35/47582000_125320591835170_1039958754650606854_n.jpg?_nc_ht=scontent-gru1-1.cdninstagram.com&_nc_cat=110&_nc_ohc=a6iq15JsbPwAX8aG_K-&oh=e65136d8c16a1d003de4edd3cbcb8e09&oe=5E8DFA58",
-            "comments": [],
-            "likes": []
+            "comments": [
+                { "userId": 1, "username": "Rafaela", "userComment": "Comentário número 1"},
+                { "userId": 2, "username": "Dani_santos", "userComment": "Comentário número 2"},
+                { "userId": 3, "username": "Marcella_oliveira", "userComment": "Comentário número 3"}
+            ],
+            "likes": [
+                { "userId": 1, "username": "Rafaela"},
+                { "userId": 2, "username": "Dani_santos"},
+                { "userId": 3, "username": "Marcella_oliveira"}
+            ]
         }
     ]
 }

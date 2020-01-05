@@ -1,8 +1,9 @@
-.card {
+.card-div {
     width: 60%;
     margin: 30px;
     border: 1px solid #dfdfdf;
 }
+
 .main-title {
     font-size: 12px;
 }
@@ -114,4 +115,16 @@
 .danger {
     color: #ed4956;
     font-weight: bolder;
+}
+
+@media (max-width: 600px) {
+    .card-div {
+        width: 100%;
+        margin: 0;
+    }
+
+    .card-div .card {
+        box-shadow: none;
+        border: none;
+    }
 }
