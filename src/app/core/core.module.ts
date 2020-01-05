@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BrandComponent } from './components/navbar/components/brand/brand.component';
 import { InstaInputComponent } from './components/navbar/components/insta-input/insta-input.component';
@@ -14,6 +15,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     FormsModule,
+    HttpClientModule,
     FlexLayoutModule,
     MatToolbarModule
   ],

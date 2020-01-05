@@ -1,4 +1,6 @@
 <app-navbar></app-navbar>
 <div class="container">
-    <app-card></app-card>
+    <div class="cards">
+        <app-card *ngFor="let followerPhoto of followersPhotos" [followerPhoto]="followerPhoto"></app-card>
+    </div>
 </div>

@@ -1,24 +1,130 @@
-.card {
-    width: 40%;
+.card-div {
+    width: 60%;
+    margin: 30px;
+    border: 1px solid #dfdfdf;
 }
-.user {
-    display: flex;
-    align-items: center;
-    position: inherit;
-}
-.title-group {
-    font-size: 6px;
-}
-.title-group .main-title {
+
+.main-title {
     font-size: 12px;
 }
 .header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+}
+.more-button {
+    position: absolute;
+    right: 10px;
 }
 .img-avatar {
     width: 40px;
     height: 40px;
     border-radius: 20px;
+}
+.action-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+.action-button {
+    background: inherit;
+    border: none;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.button-style {
+    background: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+.options-list {
+    list-style: none;
+    text-decoration: none;
+    width:100%;
+}
+
+.options-list li {
+    text-align:center;
+    font-size: 1.5em;
+    border-bottom: 1px solid #ababab;
+    width: inherit;
+    padding: 3px;
+}
+
+.options-list li:last-child {
+    border: none;
+}
+
+.action-likes-comments {
+    font-size: .8em;
+    margin: 5px;
+}
+
+.comments {
+    margin-top: 5px;
+}
+
+.likes {
+    display: flex;
+    align-items: center;
+}
+
+.likes .people-likes {
+    margin-left: 10px;
+}
+
+.user-link {
+    font-weight: bolder;
+    text-decoration: none;
+    color: black;
+}
+
+.footer-comment {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #dfdfdf;
+    padding: 15px;
+}
+
+.footer-comment .footer-input {
+    border: none;
+}
+
+.footer-comment .footer-input:focus {
+    outline: none;
+}
+
+.footer-comment .publish-button-common, .publish-button-common:focus {
+    border: none;
+    background: inherit;
+    outline: none;
+}
+
+.footer-comment .publish-button {
+    color: #7777dd;
+    cursor: pointer;
+}
+
+.disabled {
+    color: #dfdfdf;
+    cursor: default;
+}
+
+.danger {
+    color: #ed4956;
+    font-weight: bolder;
+}
+
+@media (max-width: 600px) {
+    .card-div {
+        width: 100%;
+        margin: 0;
+    }
+
+    .card-div .card {
+        box-shadow: none;
+        border: none;
+    }
 }
